@@ -1,0 +1,18 @@
+{
+  "name": "e-learning.p-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "lite-server": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC"
+}

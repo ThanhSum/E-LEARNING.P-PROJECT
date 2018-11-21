@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Admin Page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./lib/aos/aos.css">
+    <link rel="stylesheet" href="./lib/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./lib/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+    <link rel="stylesheet" href="Jquery/assets/lib/Pagination/Pagination.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-light">
+<div class="container-fluid">
+    <div class="row">
+
+        <div class=" border-right bg-white " >
+            <div style="height: 100px" class="text-center">
+                XIN CHÀO <BR>
+                {ADMIN USER}
+            </div>
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+                <a class="nav-link " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">HOME</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">DANH SÁCH  NGƯỜI DÙNG</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">DANH SÁCH KHÓA HỌC</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">GHI DANH KHÓA HỌC</a>
+            </div>
+
+        </div>
+        <div class="col-md-10 px-0">
+            <div class="border-bottom">
+                <div>DASHBOARD </div>
+
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    THÔNG TIN TỔNG QUÁT ĐƯỢC HIỂN THỊ Ở ĐÂY
+                </div>
+                <div class="tab-pane fade p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <h3>  QUẢN LÝ NGƯỜI DÙNG</h3>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="tab-pane fade  p-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                 <h3>QUẢN LÝ KHÓA HỌC</h3>
+                    <input type="text" class="form-control" placeholder="Tim Kiem Theo ...">
+                    <div class="container-fluid">
+                        <header class="display-4">Thực hành jquery với dự án quản lý trung tâm</header>
+                        <!-- Phan tab menu -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html" >Danh sách người dùng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="khoahoc.html" >Danh sách khóa học</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#ThongKe">Thống kê</a>
+                            </li>
+                        </ul>
+                        <br />
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <!--Danh sách người dùng -->
+                            <div role="tabpanel" class="tab-pane  in active" id="DanhSachNguoiDung">
+                                <div class="input-group">
+                                    <input id="txtTuKhoa" type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+            <button id="btnTimKiemKhoaHoc" class="btn btn-success" type="button">Tìm kiếm</button>
+          </span>
+                                </div>
+                                <div class="clear-fix"></div>
+                                <br />
+                                <button id="btnThemKhoaHoc" class="btn btn-success">
+                                    Thêm khóa học
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                                <button id="btnXoaDSKhoaHoc" class="btn btn-danger">
+                                    Xóa khóa học
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                                <div class="clear-fix"></div>
+                                <br />
+                                <div class="tblKhoaHoc" id="tblKhoaHoc">
+                                    <table class="table">
+                                        <thead>
+                                        <th><input id="ckbAll" type="checkbox" /></th>
+                                        <th>Mã KH</th>
+                                        <th>Tên KH</th>
+                                        <th>Mô tả</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Lượt xem</th>
+                                        <th>Người tạo</th>
+                                        </thead>
+                                        <tbody id="tblDanhSachKhoaHoc">
+
+                                        </tbody>
+                                    </table>
+                                    <div id="pagination-container"></div>
+                                </div>
+                                <br />
+                            </div>
+                            <!-- Kết thúc danh sách người dùng -->
+                            <!-- Danh sách khóa học -->
+                            <div role="tabpanel" class="tab-pane fade" id="DanhSachKhoaHoc">
+
+
+
+                            </div>
+                            <!-- Kết thúc danh sách khóa học -->
+                            <!-- Thống kê -->
+                            <div role="tabpanel" class="tab-pane fade" id="ThongKe">
+
+                            </div>
+                            <!-- Kết thúc thống kê -->
+                        </div>
+
+
+
+                        <!--KetThuc Tabmenu-->
+
+
+
+                        <!-- Button to Open the Modal -->
+                        <button style="display:none;"  id="btnModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Open modal
+                        </button>
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Modal Heading</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label>Mã khóa học</label>
+                                            <input id="MaKhoaHoc" class="form-control" placeholder="Nhập vào mã khóa học">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Tên khóa học</label>
+                                            <input id="TenKhoaHoc" class="form-control" placeholder="Nhập vào tên khóa học">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Mô tả</label>
+                                            <textarea id="MoTa"></textarea>
+                                            <!-- <input id="MoTa" class="form-control" placeholder="Nhập vào mô tả" > -->
+                                        </div>
+                                        <div class="form-group">
+                                            <label>LuotXem</label>
+                                            <input id="LuotXem" class="form-control" placeholder="Nhập vào lượt xem">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Người tạo</label>
+                                            <select class="form-control" id="NguoiTao">
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button id="btnThemKH" type="button" class="btn btn-success" >Thêm khóa học</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    TRANG QUẢN LÝ GHI DANH KHÓA HỌC
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./lib/bootstrap/jquery-3.3.1.min.js"></script>
+<script src="./lib/bootstrap/popper.min.js"></script>
+<script src="./lib/bootstrap/bootstrap.min.js"></script>
+<script src="lib/typedjs/typed.min.js"></script>
+<script src="lib/aos/aos.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/services.js"></script>
+<script src="lib/scrolline/scrolline.js"></script>
+<script src="js/jquery.ui.totop.min.js"></script>
+<script src="js/easing.js"></script>
+<!--<script src="./lib/headroom/headroom.js"></script>-->
+
+<script src="Jquery/assets/lib/Common/Common.js"></script>
+<script src="//cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="Jquery/assets/lib/Pagination/pagination.min.js"></script>
+<script src="Jquery/app/models/KhoaHoc.js"></script>
+<script src="Jquery/app/models/DanhSachKhoaHoc.js"></script>
+<script src="Jquery/app/services/KhoaHocService.js"></script>
+
+<!--<script src="Jquery/app/controllers/main.js"></script>-->
+<script src="Jquery/app/controllers/khoahoc.js"></script>
+
+
+
+
+
+
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        /*
+         var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+
+            autoplay: true,
+            animateIn: true,
+
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                    // chinh so luong car hien thi
+                }
+            }
+        })
+
+
+    });
+</script>
+
+<script>
+    AOS.init();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Danh Sách Khóa Học </title>
+
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./lib/aos/aos.css">
+
+    <link rel="stylesheet" href="./lib/hover/hover-min.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body style="background: #000;">
+<div class="KhoaHoc container-fluid  py-5 ">
+    <div class="tab m-auto   " id="KhoaHoc" data-aos="zoom-in" data-aos-duration="1000">
+        <ul class="nav nav-pills  ulTabStyle  ">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#home">TẤT CẢ KHÓA HỌC</a>
+            </li>
+            <li class="nav-item" style="border-right: 1px solid">
+                <a class="nav-link" data-toggle="pill" href="#menu1">KHÓA HỌC 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu2">KHÓA HỌC 2</a>
+            </li>
+        </ul>
+    </div>
+    <div class="input-group mb-5">
+        <div class="input-group-prepend" style="border: 1px solid black">
+        </div>
+        <input type="text" class="form-control p-3" placeholder="Tìm Kiếm Khóa Học" aria-label="Tìm Kiếm Khóa Học"
+               aria-describedby="basic-addon1" style="border-radius: 0;" id="Search">
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content ">
+        <div class="tab-pane  active" id="home">
+            <div class=" row   p-0" id="allKhoaHoc">
+            </div>
+        </div>
+        <div class="tab-pane   fade  " id="menu1">
+            <div class=" row " id="khoaHoc1"></div>
+        </div>
+        <div class="tab-pane    fade" id="menu2">
+            <div class="khoaHoc2 row"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./lib/bootstrap/jquery-3.3.1.min.js"></script>
+<script src="./lib/bootstrap/popper.min.js"></script>
+<script src="./lib/bootstrap/bootstrap.min.js"></script>
+
+<script src="lib/aos/aos.js"></script>
+
+<script src="js/services.js"></script>
+<script src="lib/scrolline/scrolline.js"></script>
+<script src="js/jquery.ui.totop.min.js"></script>
+<script src="js/easing.js"></script>
+
+
+<script src="js/khoahoc.js"></script>
+
+<script>
+    $(document).ready(function () {
+        /*
+         var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

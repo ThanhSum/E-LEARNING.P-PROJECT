@@ -1,0 +1,5 @@
+{
+    "port":8888,
+    "files":["./**/**/*.{html,css,js,jpg,png}","./**/**/*.{html,css,js,jpg,png}"],
+    "server":{"baseDir":["./app/views/Page","./app","./"]}
+}

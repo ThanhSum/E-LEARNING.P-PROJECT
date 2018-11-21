@@ -1,0 +1,308 @@
+/*FONT*/
+body {
+    font-family: Merriweather-Regular, serif;
+
+    font-size: 17px;;
+    line-height: 32px;
+}
+
+@font-face {
+    font-family: Merriweather-Regular;
+    src: url("../fonts/Merriweather-Regular.ttf");
+}
+
+@font-face {
+    font-family: Merriweather-Light;
+    src: url("../fonts/Merriweather-Light.ttf");
+}
+
+@font-face {
+    font-family: ChakraPetch-Medium;
+    src: url("../fonts/ChakraPetch-Medium.ttf");
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*NAVBAR*/
+.btnNavbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    margin-top: 6px;
+}
+
+.myNavbar {
+    background: linear-gradient(#757575, #212121);
+    background: #212121;
+}
+
+.btnUser {
+    background: #FFD600;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    color: #000;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*COVER*/
+.cover {
+    background-image: url('../img/slider-2.jpg');
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.over {
+    background: rgba(0, 0, 0, .7);
+    height: 100%;
+}
+
+.coverContent {
+    /*font-family:  ChakraPetch-Medium, serif;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*GIỚI THIỆU*/
+.UuViet i {
+    font-size: 40px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*GIÁO VIÊN*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*KHÓA HỌC*/
+
+.ulTabStyle {
+    display: flex;
+    border: 1px solid;
+    width: fit-content;
+    justify-content: center;
+}
+
+.ulTabStyle > li > a {
+    padding: 15px 20px;
+    color: #FFD600;
+    border-radius: 0px !important;
+}
+
+.ulTabStyle > li > a.active {
+    background: #FFD600 !important;
+    color: black !important;
+}
+
+.myBtnJS {
+    background: linear-gradient(#F5F5F5, #9E9E9E);
+    background: black;
+    color: white;
+    padding: 7px 25px;
+    border: none;
+    border-radius: 30px !important;
+}
+
+.bgCard {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*UPTOP*/
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 79px;
+    right: 2%;
+    overflow: hidden;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+    border: none;
+    text-indent: 100%;
+    background: url(../img/ui.totop.png) no-repeat 0px 0px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+#toTopHover {
+    width: 32px;
+    height: 32px;
+    display: block;
+    overflow: hidden;
+    float: right;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*userprofile*/
+.userPageContent > .container > .row > .col-md-4 > .card > ul > li > a.active {
+    background: #000;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*HOC VIEN*/
+
+.carousel {
+    margin: 50px auto;
+}
+
+.carousel .item {
+    color: #999;
+    overflow: hidden;
+    min-height: 220px;
+    font-size: 13px;
+}
+
+.carousel .media {
+    position: relative;
+    padding: 0 0 0 20px;
+    margin-left: 20px;
+}
+
+.carousel .media img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+
+.carousel .testimonial {
+    color: #fff;
+    position: relative;
+    background: #212121;
+    text-align: justify;
+    padding: 15px;
+    margin: 0 0 20px 20px;
+}
+
+.carousel .testimonial::before, .carousel .testimonial::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.carousel .testimonial::before {
+    width: 20px;
+    height: 20px;
+    background: #9b9b9b;
+    box-shadow: inset 12px 0 13px rgba(0, 0, 0, 0.5);
+}
+
+.carousel .testimonial::after {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #ffd600;
+    border-left-color: #ffd600;
+}
+
+.carousel .item .row > div:first-child .testimonial {
+    margin: 0 20px 20px 0;
+}
+
+.carousel .item .row > div:first-child .media {
+    margin-left: 0;
+}
+
+.carousel .testimonial p {
+    text-indent: 40px;
+    line-height: 30px;
+    font-size: 15px;
+    margin: 0;
+}
+
+.carousel .testimonial p::before {
+    content: '\94';
+    color: #fff;
+    font-weight: bold;
+    font-size: 68px;
+    line-height: 70px;
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+.carousel .overview {
+    padding: 3px 0 0 15px;
+}
+
+.carousel .overview .details {
+    padding: 5px 0 8px;
+    color: #000;
+}
+
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.carousel .carousel-control {
+    width: 30px;
+    height: 30px;
+    background: #666;
+    text-shadow: none;
+    top: 4px;
+}
+
+.carousel-control i {
+    font-size: 16px;
+}
+
+.carousel-control.left {
+    left: auto;
+    right: 40px;
+}
+
+.carousel-control.right {
+    left: auto;
+}
+
+.carousel-indicators {
+    bottom: 0px;
+
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 18px;
+    height: 18px;
+    border-radius: 30px;
+    margin: 1px 4px;
+}
+
+.carousel-indicators li {
+    background: #e2e2e2;
+    border: 4px solid #fff;
+}
+
+.carousel-indicators li.active {
+    color: #fff;
+    background: #ff5555;
+    border: 5px double;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.visible-xs {
+    margin-bottom: 15px;
+}
+ /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
